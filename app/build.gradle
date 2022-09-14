@@ -45,7 +45,6 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
-
     implementation 'com.burhanrashid52:photoeditor:2.0.0'
     implementation 'com.github.ronnieotieno:Ronnie-Image-Picker:1.1.0'
 

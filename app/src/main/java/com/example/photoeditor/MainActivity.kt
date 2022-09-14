@@ -24,8 +24,13 @@ import ja.burhanrashid52.photoeditor.PhotoEditor
 import ja.burhanrashid52.photoeditor.TextStyleBuilder
 import java.io.File
 import java.io.FileOutputStream
-import java.util.*
 
+
+/**
+
+this project build from : https://github.com/burhanrashid52/PhotoEditor
+
+ * **/
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -34,7 +39,6 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        requestWindowFeature( Window.FEATURE_NO_TITLE )
         binding = DataBindingUtil.setContentView(this,R.layout.activity_main)
 
 
@@ -44,7 +48,6 @@ class MainActivity : AppCompatActivity() {
             .setPinchTextScalable(true)
             .setClipSourceImage(true)
             .build()
-
 
 
         checkPermission()
@@ -122,11 +125,7 @@ class MainActivity : AppCompatActivity() {
             }
 
 
-
-
         }
-
-
 
 
 
@@ -140,7 +139,7 @@ class MainActivity : AppCompatActivity() {
                 Manifest.permission.CAMERA
             ).withListener(object : MultiplePermissionsListener {
                 override fun onPermissionsChecked(report: MultiplePermissionsReport) {
-//                    saveImageToGallery()
+
                 }
 
                 override fun onPermissionRationaleShouldBeShown(permissions: List<PermissionRequest?>?, token: PermissionToken?) {
@@ -148,6 +147,8 @@ class MainActivity : AppCompatActivity() {
                 }
             }).check()
     }
+
+
     private fun saveImageToInternalStorage(bitmap: Bitmap) {
         var outputStream: FileOutputStream? = null
         val file = Environment.getExternalStorageDirectory()
@@ -168,7 +169,7 @@ class MainActivity : AppCompatActivity() {
             Log.d("PhotoEditor", "SaveImageToGallery: " + e.message)
         }
     }
-    
+
 
     private fun save(){
         mPhotoEditor.saveAsBitmap(object: OnSaveBitmap {
@@ -193,7 +194,6 @@ class MainActivity : AppCompatActivity() {
             }
             is ImageResult.Failure -> {
                 val error = imageResult.errorString
-//                Toast.makeText(this@MainActivity, errorString, Toast.LENGTH_LONG).show()
             }
         }
     }
@@ -218,6 +218,7 @@ class MainActivity : AppCompatActivity() {
             btnSticker.setColorFilter(Color.WHITE)
         }
     }
+
 
     private fun isEnableButtons(b: Boolean) {
         binding.apply {
