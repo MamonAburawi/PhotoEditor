@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Photo Editor</string>
+    <string name="brush">Brush</string>
+    <string name="text">Text</string>
+    <string name="eraser">Eraser</string>
+    <string name="filter">Filter</string>
+    <string name="emoji">Emoji</string>
+    <string name="sticker">Sticker</string>
+</resources>
